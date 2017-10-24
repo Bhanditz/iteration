@@ -1,5 +1,7 @@
 # Make a local change
 # Make another local change
+# Make a change from home
+# This is change [B] from local
 
 # iteration pattern
 
