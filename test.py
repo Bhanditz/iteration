@@ -16,8 +16,17 @@ from iteration import *
 
 # congratulations(names, scores)
 
-scores = [1, 3, 4, 2]
+short_scores = [5, 21, 11, 13, 12, 72, 71]
+scores = [1, 3, 4, 2, 6, 5, 8, 3, 4, 2, 2, 2, 3, 2, 5, 7]
 
-print sum(scores)
+# print sum(scores)
 
-print max(scores)
+# print max(scores)
+
+print alternating_sum(scores)
+
+print sum_outside(scores, 2, 5)
+
+print count_close_remainders(scores, 5)
+
+print double_down(scores, 5)
