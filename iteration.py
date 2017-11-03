@@ -108,8 +108,8 @@ def mode(numbers):
         else:
             amounts_of_numbers[n] = 1
     
-    number = list(dictionary.values())
-    amount = list(dictionary.keys())
+    v = list(dictionary.values())
+    k = list(dictionary.keys())
 
     most_common = max(v)
 
@@ -138,8 +138,3 @@ def mountains(numbers):
                 
     
     return number_of_mountains, ". The largest monutain can be found at index ", largest_mountain_location, "and is this big: ", largest_mountain_size
-
-def list_mountains(numbers):
-    for n in range(1, len(numbers)-1):
-        if numbers[n] > numbers[n-1] and numbers[n] > numbers[n+1]:
-            
