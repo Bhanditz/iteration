@@ -1,32 +1,18 @@
-from iteration import *
+#!/usr/bin/env python
+#from iteration import *
+import sys
 
-# scores = [100, 90, 85, 100, 0]
+data = open("animals.csv", 'r')
+lines = data.readlines()
 
-# iterate(scores)
-# scores = add_one(scores)
-# iterate(scores)
+animal_names = []
+animal_ratings = []
+animal_countries = []
+for i in range(1, len(lines)):
+    info = lines[i].rstrip().split(",") # [Animal, Rating, Country]
+    animal_names.append(info[0])
+    animal_ratings.append(info[1])
+    animal_countries.append(info[2])
 
-# names = ["Amy", "Bill", "Carol", "Dave", "Emily"]
-
-# iterate(names)
-
-
-# print_scores(names, scores)
-
-
-# congratulations(names, scores)
-
-short_scores = [5, 21, 11, 13, 12, 72, 71]
-scores = [1, 3, 4, 2, 6, 5, 8, 3, 4, 2, 2, 2, 3, 2, 5, 7]
-
-# print sum(scores)
-
-# print max(scores)
-
-print alternating_sum(scores)
-
-print sum_outside(scores, 2, 5)
-
-print count_close_remainders(scores, 5)
-
-print double_down(scores, 5)
+for row in range(0, len(animal_names)):
+    print animal_names[row], "is rated", animal_ratings[row], "and is from", animal_countries[row]

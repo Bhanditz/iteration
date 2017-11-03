@@ -1,3 +1,5 @@
+from math import *
+
 # Iteration Pattern
 # Doing the same thing once for each member of a list.
 
@@ -84,3 +86,60 @@ def double_down(numbers, target):
                 final.append(numbers[n])
     return final
 
+# Given a list of ints, find the standard deviation (http://www.mathsisfun.com/data/standard-deviation.html).
+def standard_deviation(numbers):
+    mean = sum(numbers) / len(numbers)
+
+    deviation_list = []
+    for n in numbers:
+        deviation_list.append((n - mean) * (n - mean))
+
+    variance = sum(deviation_list) / len(numbers)
+    return sqrt(variance)
+
+# Given a list of ints, find the Mode
+
+def mode(numbers):
+    amounts_of_numbers = {}
+
+    for n in numbers:
+        if n in amounts_of_numbers:
+            amounts_of_numbers[n] += 1
+        else:
+            amounts_of_numbers[n] = 1
+    
+    number = list(dictionary.values())
+    amount = list(dictionary.keys())
+
+    most_common = max(v)
+
+    max_list = list()
+
+    for value in v:
+        if value == most_common:
+            max_list.append(value)
+
+    modes = list()
+    for val in max_list:
+        modes.append(k[v.index(val)])
+
+    return modes
+
+def mountains(numbers):
+    number_of_mountains = 0
+    largest_mountain_size = 0
+    largest_mountain_location = 0
+    for n in range(1, len(numbers)-1):
+        if numbers[n] > numbers[n-1] and numbers[n] > numbers[n+1]:
+            number_of_mountains += 1
+            if (numbers[n] - numbers[n-1]) + (numbers[n] - numbers[n+1]) > largest_mountain_size:
+                largest_mountain_size = (numbers[n] - numbers[n-1]) + (numbers[n] - numbers[n+1])
+                largest_mountain_location = n
+                
+    
+    return number_of_mountains, ". The largest monutain can be found at index ", largest_mountain_location, "and is this big: ", largest_mountain_size
+
+def list_mountains(numbers):
+    for n in range(1, len(numbers)-1):
+        if numbers[n] > numbers[n-1] and numbers[n] > numbers[n+1]:
+            
